@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="vendors/jquery-bar-rating/css-stars.css" />
         <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="shortcut icon" href="images/favicon.png" />
     </head>
     <body>
         <div class="container-scroller">
@@ -110,6 +109,7 @@
                                               <th><strong>Nombre</strong></th>
                                               <th><strong>Stock Ecommerce</strong></th>
                                               <th><strong>Stock Marketplace</strong></th>
+                                              <th><strong>Detalles</strong></th>
                                             </tr>
                                           </thead>
                                           <tbody>
@@ -119,7 +119,9 @@
                                       
                                               <td>12</td>
                                               <td>8</td>
+                                              <td> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"> Ver</button></td>
                                             </tr>
+                                            
                                             <tr>
                                               <td>5412360004225</td>
                                               <td>Aromaterapia- Aceites Esenciales Árbol de Té Physalis</td>
@@ -157,8 +159,32 @@
                                             </tr>
                                           </tbody>
                                         </table>
+                                        <!--Modal 1-->
+                                        <div class="modal fade" id="myModal" role="dialog">
+                                            <div class="modal-dialog">
+                                              <!-- Modal content-->
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h4 class="modal-title">Traspasos</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                  <p><strong>SKU:</strong> 2750000004529 </p>
+                                                  <p><strong>Nombre:</strong> Natural B-complex 426 Mg X 100 Cápsulas Natblue</p>
+                                                  <p><strong>Stock Ecommerce:</strong> 12</p>
+                                                  <p><strong>Stock Marketplace:</strong> 8</p>
+                                                  <p><strong>Cantidad:</strong> 20</p>
+                                                  <button type="button" class="btn btn-success">Traspaso a Ecommerce</button>
+                                                  <button type="button" class="btn btn-primary">Traspaso a Marketplace</button>
+                                                  
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                        </div>                                          
                                       </div>
-                                      
+                                      <!--Fin Modal 1-->
                                 </div>
                             </div>
                         </div>
@@ -172,7 +198,8 @@
                 </footer>
             </div>
         </div>
-
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="vendors/js/vendor.bundle.base.js"></script>
         <script src="vendors/jquery-bar-rating/jquery.barrating.min.js"></script>
         <script src="vendors/chart.js/Chart.min.js"></script>
@@ -191,6 +218,10 @@
         <script src="https://unpkg.com/feather-icons"></script>
         <script>
             feather.replace();
+
+            $("#myModal").on('hidden.bs.modal', function (e) {
+        $("#myModal iframe").attr("src", $("#myModal iframe").attr("src"));
+    });
         </script>
     </body>
 </html>
