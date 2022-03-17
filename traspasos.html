@@ -4,17 +4,12 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Distribución entre Plataforma de Stocks - Farmacias Knop</title>
-
         <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
         <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css" />
         <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
-
         <link rel="stylesheet" href="vendors/jquery-bar-rating/css-stars.css" />
         <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css" />
-
         <link rel="stylesheet" href="css/style.css" />
-
-        <link rel="shortcut icon" href="images/favicon.png" />
     </head>
     <body>
         <div class="container-scroller">
@@ -89,14 +84,80 @@
                         <div class="col-xl-12 stretch-card grid-margin">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="d-flex justify-content-between flex-wrap">
-                                        <div>
-                                            <div class="card-title mb-0">Buscar por SKU</div>
-                                        </div>
-                                        <div></div>
-                                    </div>
+                                    <!--Buscador-->
+                                    <form>
+                                        <div class="card-body row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                                <i data-feather="search"></i>
+                                            </div>
 
-                                    <div class="table-bordered"></div>
+                                            <div class="col">
+                                                <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Buscar por SKU..." />
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <button class="btn btn-lg btn-primary" type="submit">Buscar</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!--Tabla-->
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th><strong>SKU</strong></th>
+                                                    <th><strong>Nombre</strong></th>
+                                                    <th><strong>Stock Ecommerce</strong></th>
+                                                    <th><strong>Stock Marketplace</strong></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>2750000004529</td>
+                                                    <td>Natural B-complex 426 Mg X 100 Cápsulas Natblue</td>
+
+                                                    <td>12</td>
+                                                    <td>8</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>5412360004225</td>
+                                                    <td>Aromaterapia- Aceites Esenciales Árbol de Té Physalis</td>
+
+                                                    <td>4</td>
+                                                    <td>9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2690000004436</td>
+                                                    <td>Aceite Rosa Mosqueta Pirihueico® 30 mL</td>
+
+                                                    <td>18</td>
+                                                    <td>22</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7804651860241</td>
+                                                    <td>Matcha organica 100g, Manare</td>
+
+                                                    <td>12</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6936020115186</td>
+                                                    <td>Test rápido Antígeno Nasal Individual</td>
+
+                                                    <td>2</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7803504002609</td>
+                                                    <td>Echiprop 60 comprimidos</td>
+
+                                                    <td>4</td>
+                                                    <td>1</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +171,6 @@
                 </footer>
             </div>
         </div>
-
         <script src="vendors/js/vendor.bundle.base.js"></script>
         <script src="vendors/jquery-bar-rating/jquery.barrating.min.js"></script>
         <script src="vendors/chart.js/Chart.min.js"></script>
@@ -120,11 +180,15 @@
         <script src="vendors/flot/jquery.flot.fillbetween.js"></script>
         <script src="vendors/flot/jquery.flot.stack.js"></script>
         <script src="js/jquery.cookie.js" type="text/javascript"></script>
-         <script src="js/off-canvas.js"></script>
+        <script src="js/off-canvas.js"></script>
         <script src="js/hoverable-collapse.js"></script>
         <script src="js/misc.js"></script>
         <script src="js/settings.js"></script>
         <script src="js/todolist.js"></script>
         <script src="js/dashboard.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script>
+            feather.replace();
+        </script>
     </body>
 </html>
