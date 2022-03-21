@@ -102,7 +102,7 @@
                   </form>
                   <!--Tabla-->
                   <div class="table-responsive">
-                    <table class="table table-bordered text-center">
+                    <table class="table table-bordered text-center" id="example3">
                       <thead>
                         <tr>
                           <th><strong>SKU</strong></th>
@@ -116,37 +116,37 @@
                           <td>2750000004529</td>
                           <td>Natural B-complex 426 Mg X 100 Cápsulas Natblue</td>
 
-                          <td>12</td>
-                          <td>8</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">12</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">8</td>
                         </tr>
 
                         <tr>
                           <td>5412360004225</td>
                           <td>Aromaterapia- Aceites Esenciales Árbol de Té Physalis</td>
 
-                          <td>4</td>
-                          <td>9</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">4</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">9</td>
                         </tr>
                         <tr>
                           <td>2690000004436</td>
                           <td>Aceite Rosa Mosqueta Pirihueico® 30 mL</td>
 
-                          <td>18</td>
-                          <td>22</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">18</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">22</td>
                         </tr>
                         <tr>
                           <td>7804651860241</td>
                           <td>Matcha organica 100g, Manare</td>
 
-                          <td>12</td>
-                          <td>2</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">12</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">2</td>
                         </tr>
                         <tr>
                           <td>6936020115186</td>
                           <td>Test rápido Antígeno Nasal Individual</td>
 
-                          <td>2</td>
-                          <td>0</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">2</td>
+                          <td class="tabledit-view-mode" style="cursor: pointer;">0</td>
                         </tr>
                         <tr>
                           <td>7803504002609</td>
@@ -187,8 +187,22 @@
     <script src="js/todolist.js"></script>
     <script src="js/dashboard.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
+    <script src="js/jquery.tabledit.js"></script>
+    <script src="js/jquery.tabledit.min.js"></script>
     <script>
       feather.replace();
+
+      $('#example3').Tabledit({
+      url: 'example.php',
+      editButton: false,
+      deleteButton: false,
+      hideIdentifier: true,
+      columns: {
+          identifier: [1, 'id'],
+          editable: [[2, 'stock_eco'], [3, 'stock_mkp']]
+      }
+  });
+      
     </script>
   </body>
 </html>
