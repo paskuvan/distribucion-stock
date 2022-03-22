@@ -42,9 +42,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="administrador.html">
+                        <a class="nav-link" href="productos.html">
                             <i class="mdi mdi-account menu-icon"></i>
-                            <span class="menu-title">Administrador</span>
+                            <span class="menu-title">Productos</span>
                         </a>
                     </li>
                 </ul>
@@ -79,21 +79,86 @@
             </nav>
             <div class="main-panel">
                 <div class="content-wrapper pb-0">
-                    <div class="row">
-                        <div class="col-xl-12 stretch-card grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between flex-wrap">
-                                        <div>
-                                            <div class="card-title mb-0">Administrador</div>
-                                        </div>
-                                        <div></div>
-                                    </div>
-
-                                    <div>Acceso</div>
-                                </div>
-                            </div>
+                    <div class="page-header flex-wrap">
+                      
+                        <div class="header-right d-flex flex-wrap mt-2 mt-sm-0">
+                            <button type="button" class="btn btn-primary mt-2 mt-sm-0 btn-icon-text" data-toggle="modal" data-target="#myModal"><i class="mdi mdi-plus-circle"></i> Agregar</button>
+  
                         </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center" id="example3">
+                            <thead>
+                                <tr>
+                                    <th><strong>SKU</strong></th>
+                                    <th><strong>Nombre</strong></th>
+                                    <th><strong>Stock Ecommerce</strong></th>
+                                    <th><strong>Stock Marketplace</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2750000004529</td>
+                                    <td>Natural B-complex 426 Mg X 100 Cápsulas Natblue</td>
+          
+                                    <td>12</td>
+                                    <td>8</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>5412360004225</td>
+                                    <td>Aromaterapia- Aceites Esenciales Árbol de Té Physalis</td>
+          
+                                    <td>4</td>
+                                    <td>9</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2690000004436</td>
+                                    <td>Aceite Rosa Mosqueta Pirihueico® 30 mL</td>
+          
+                                    <td>18</td>
+                                    <td>22</td>
+                                  </tr>
+                                  <tr>
+                                    <td>7804651860241</td>
+                                    <td>Matcha organica 100g, Manare</td>
+          
+                                    <td>12</td>
+                                    <td>2</td>
+                                  </tr>
+                                  <tr>
+                                    <td>6936020115186</td>
+                                    <td>Test rápido Antígeno Nasal Individual</td>
+          
+                                    <td>2</td>
+                                    <td>0</td>
+                                  </tr>
+                                  <tr>
+                                    <td>7803504002609</td>
+                                    <td>Echiprop 60 comprimidos</td>
+          
+                                    <td>4</td>
+                                    <td>1</td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                            <!--Modal-->
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                   
+                                    <div class="modal-body">
+                                    <p><strong>Cantidad:</strong> 150</p>
+                                    <p><strong>Ecommerce:</strong> 80</p>
+                                    <p><strong>Marketplace:</strong>70</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                                </div>
+                     </div>
                     </div>
                 </div>
 
