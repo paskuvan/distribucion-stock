@@ -15882,3 +15882,10 @@ dl {
   flex-grow: 1; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/*Form Control Padding*/
+
+.form-control {
+  padding: 6px !important;
+};
